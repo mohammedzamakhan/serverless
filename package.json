@@ -34,7 +34,9 @@
     "serverless-run-python-handler": "./bin/serverless-run-python-handler"
   },
   "scripts": {
-    "test": "DEBUG=\"*\" mocha tests/all"
+    "test": "DEBUG=\"*\" mocha tests/all",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "devDependencies": {
     "chai": "^3.2.0",
@@ -65,6 +67,8 @@
     "shortid": "^2.2.2",
     "temp": "^0.8.3",
     "traverse": "^0.6.6",
-    "wrench": "^1.5.8"
-  }
+    "wrench": "^1.5.8",
+    "snyk": "^1.317.0"
+  },
+  "snyk": true
 }
